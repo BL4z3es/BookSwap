@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frequently asked questions about BookSwap. Find answers about listing books, contacting owners, safety, and more.">
+  <title>FAQ - BookSwap</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <nav class="container-page">
+      <div class="navbar-inner">
+        <a href="index.html" class="navbar-logo">
+          <div class="navbar-logo-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+            </svg>
+          </div>
+          <span class="navbar-logo-text">BookSwap</span>
+        </a>
+        
+        <div class="navbar-links">
+          <a href="browse.html" class="navbar-link">Browse Books</a>
+          <a href="about.html" class="navbar-link">About</a>
+          <a href="faq.html" class="navbar-link active">FAQ</a>
+          <a href="contact.html" class="navbar-link">Contact</a>
+        </div>
+        
+        <div class="navbar-actions">
+          <a href="list.html" class="btn btn-hero-secondary btn-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+            </svg>
+            List a Book
+          </a>
+          <a href="dashboard.html" class="btn btn-ghost btn-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+            </svg>
+          </a>
+        </div>
+        
+        <button class="navbar-mobile-toggle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="navbar-mobile-menu">
+        <div class="navbar-mobile-links">
+          <a href="browse.html" class="navbar-link">Browse Books</a>
+          <a href="about.html" class="navbar-link">About</a>
+          <a href="faq.html" class="navbar-link active">FAQ</a>
+          <a href="contact.html" class="navbar-link">Contact</a>
+        </div>
+        <div class="navbar-mobile-actions">
+          <a href="list.html" class="btn btn-hero-secondary btn-md btn-full">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+            </svg>
+            List a Book
+          </a>
+          <a href="dashboard.html" class="btn btn-outline btn-md btn-full">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+            </svg>
+            Dashboard
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="faq-page">
+    <div class="container-page py-16">
+      <!-- Header -->
+      <div class="faq-header">
+        <div class="faq-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/>
+          </svg>
+        </div>
+        <h1 class="faq-title">Frequently Asked Questions</h1>
+        <p class="faq-subtitle">Find answers to common questions about BookSwap</p>
+      </div>
+
+      <!-- FAQ List -->
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            How do I list a book?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Click on 'List a Book' in the navigation menu. Fill in the book details including title, subject, grade, and condition. Add a photo if possible, choose your preferred contact method, and publish. Your listing will be live immediately!
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How do I contact a book owner?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            On any book listing page, you'll see the owner's preferred contact method. Click the 'Contact Owner' button to reach out via WhatsApp, SMS, or email. Be polite, introduce yourself, and arrange a convenient time and place to meet.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is BookSwap really free?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Yes, absolutely! BookSwap is 100% free for everyone. We don't charge any fees for listing books, contacting owners, or using any features of the platform. Our goal is to help families share educational resources, not to make money.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What personal information is shown publicly?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Only your display name and general location (city/area) are visible on your listings. Your email, phone number, or other contact details are never publicly displayed. When someone wants to contact you, they do so through the contact method you've chosen.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How do I ensure a safe meetup?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            We recommend meeting in public places during daylight hours—school parking lots, shopping centers, or coffee shops work great. Consider bringing a friend or family member. Trust your instincts, and if something feels off, it's okay to cancel.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I reserve a book?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Book owners can mark their listings as 'Reserved' if someone has expressed interest. This helps prevent multiple people from showing up for the same book. If you're interested in a book, reach out to the owner quickly!
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What if a book is in poor condition?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            We ask all listers to honestly describe their book's condition. If you receive a book that's significantly worse than described, please contact the owner directly. If there's a serious issue, you can report the listing to our support team.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How do I delete my account?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            You can delete your account in your Dashboard under Settings. This will remove all your listings and personal information from our platform. This action cannot be undone.
+          </div>
+        </div>
+      </div>
+
+      <!-- Still Have Questions -->
+      <div class="faq-footer">
+        <p>Can't find what you're looking for?</p>
+        <a href="contact.html" class="btn btn-hero-secondary btn-md">Contact Us</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container-page footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="navbar-logo">
+            <div class="navbar-logo-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+              </svg>
+            </div>
+            <span class="navbar-logo-text">BookSwap</span>
+          </a>
+          <p>A community-driven platform helping students and parents share, swap, and find school books for free.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Platform</h4>
+          <ul class="footer-links">
+            <li><a href="browse.html">Browse Books</a></li>
+            <li><a href="list.html">List a Book</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2024 BookSwap. All rights reserved.</p>
+        <p>Made with <span class="footer-heart">❤</span> for the community</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

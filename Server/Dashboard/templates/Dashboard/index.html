@@ -1,0 +1,187 @@
+{% extends "Dashboard/base.html" %}
+{% block content %}
+<!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container-page">
+        <div class="hero-content max-w-3xl mx-auto">
+          <div class="hero-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m12 3-1.9 5.8a2 2 0 0 1-1.287 1.288L3 12l5.8 1.9a2 2 0 0 1 1.288 1.287L12 21l1.9-5.8a2 2 0 0 1 1.287-1.288L21 12l-5.8-1.9a2 2 0 0 1-1.288-1.287Z"/>
+            </svg>
+            100% Free & Community-Driven
+          </div>
+          
+          <h1 class="hero-title">
+            Find & Share School Books <span class="hero-title-gradient">Easily</span>
+          </h1>
+          
+          <p class="hero-description">
+            A simple, free platform for students and parents to give, swap, and find last year's books. No more WhatsApp chaos.
+          </p>
+          
+          <div class="hero-actions">
+            <a href="browse.html" class="btn btn-hero btn-xl">
+              Browse Books
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+            <a href="list.html" class="btn btn-hero-secondary btn-xl">List a Book</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Search -->
+    <section class="search-section">
+      <div class="container-page">
+        <div class="search-wrapper">
+          <div class="search-input-wrapper">
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+            </svg>
+            <input type="text" class="input search-input" placeholder="Search by title, subject, grade...">
+            <a href="browse.html" class="btn btn-primary btn-lg search-btn">Search</a>
+          </div>
+          <div class="search-tags">
+            <span class="search-tags-label">Popular:</span>
+            <a href="browse.html?q=Grade 10" class="search-tag">Grade 10</a>
+            <a href="browse.html?q=Mathematics" class="search-tag">Mathematics</a>
+            <a href="browse.html?q=English" class="search-tag">English</a>
+            <a href="browse.html?q=Science" class="search-tag">Science</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section">
+      <div class="container-page">
+        <div class="section-header">
+          <h2 class="section-title">How It Works</h2>
+          <p class="section-subtitle">Three simple steps to start sharing and finding books</p>
+        </div>
+        
+        <div class="grid grid-3 max-w-5xl mx-auto">
+          <div class="step-card">
+            <div class="step-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+              </svg>
+            </div>
+            <div class="step-number">Step 1</div>
+            <h3 class="step-title">List Your Books</h3>
+            <p class="step-description">Take a photo, add details, and publish your listing in under 2 minutes.</p>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/>
+              </svg>
+            </div>
+            <div class="step-number">Step 2</div>
+            <h3 class="step-title">Discover What You Need</h3>
+            <p class="step-description">Browse by grade, subject, or school. Find exactly what you're looking for.</p>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"/><path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"/><path d="m2 15 6 6"/><path d="M19.5 8.5c.7-.7 1.5-1.6 1.5-2.7A2.73 2.73 0 0 0 16 4a2.78 2.78 0 0 0-5 1.8c0 1.2.8 2 1.5 2.8L16 12Z"/>
+              </svg>
+            </div>
+            <div class="step-number">Step 3</div>
+            <h3 class="step-title">Contact the Owner</h3>
+            <p class="step-description">Reach out directly via WhatsApp, SMS, or email to arrange pickup.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="section section-bg-card">
+      <div class="container-page">
+        <div class="section-header">
+          <h2 class="section-title">Why Use BookSwap?</h2>
+        </div>
+        
+        <div class="grid grid-3 max-w-5xl mx-auto">
+          <div class="benefit-card">
+            <svg class="benefit-icon benefit-icon-primary" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+            <h3 class="benefit-title">Save Money</h3>
+            <p class="benefit-description">School books are expensive. Find free or affordable options from other families.</p>
+          </div>
+          
+          <div class="benefit-card">
+            <svg class="benefit-icon benefit-icon-success" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+            </svg>
+            <h3 class="benefit-title">Reduce Waste</h3>
+            <p class="benefit-description">Give books a second life instead of letting them collect dust on shelves.</p>
+          </div>
+          
+          <div class="benefit-card">
+            <svg class="benefit-icon benefit-icon-warning" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/>
+            </svg>
+            <h3 class="benefit-title">Avoid WhatsApp Chaos</h3>
+            <p class="benefit-description">No more endless group messages. One organized platform for all book sharing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Books -->
+    <section class="section">
+      <div class="container-page">
+        <div class="featured-header">
+          <div>
+            <h2 class="featured-title">Recently Listed</h2>
+            <p class="featured-subtitle">Fresh additions from the community</p>
+          </div>
+          <a href="browse.html" class="btn btn-outline btn-md featured-view-all">
+            View All
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+        
+        <div class="grid grid-4" id="featured-books">
+          <!-- Books will be loaded by JavaScript -->
+        </div>
+        
+        <div class="featured-view-all-mobile">
+          <a href="browse.html" class="btn btn-outline btn-md">
+            View All Books
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container-page">
+        <div class="cta-content">
+          <h2 class="cta-title">Start Swapping Today</h2>
+          <p class="cta-description">Join thousands of families already saving money and reducing waste. It's completely free.</p>
+          <div class="cta-actions">
+            <a href="browse.html" class="btn btn-hero btn-xl">
+              Browse Books
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+            <a href="list.html" class="btn btn-hero-secondary btn-xl">List Your Books</a>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}
