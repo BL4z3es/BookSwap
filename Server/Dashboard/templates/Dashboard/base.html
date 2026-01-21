@@ -11,14 +11,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{% static 'Dashboard/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'Dashboard/style.css' %}">
 </head>
 <body>
   <!-- Navbar -->
   <header class="navbar">
     <nav class="container-page">
       <div class="navbar-inner">
-        <a href="index.html" class="navbar-logo">
+        <a href="{% url 'home' %}" class="navbar-logo">
           <div class="navbar-logo-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
@@ -28,24 +28,47 @@
         </a>
         
         <div class="navbar-links">
-          <a href="browse.html" class="navbar-link">Browse Books</a>
-          <a href="about.html" class="navbar-link">About</a>
-          <a href="faq.html" class="navbar-link">FAQ</a>
-          <a href="contact.html" class="navbar-link">Contact</a>
+          <a href="{% url 'browse' %}" class="navbar-link">Browse Books</a>
+          <a href="{% url 'about' %}" class="navbar-link">About</a>
+          <a href="{% url 'faq' %}" class="navbar-link">FAQ</a>
+          <a href="{% url 'contact' %}" class="navbar-link">Contact</a>
         </div>
         
         <div class="navbar-actions">
-          <a href="list.html" class="btn btn-hero-secondary btn-sm">
+          {% if user.is_authenticated %}
+          <a href="{% url 'upload' %}" class="btn btn-hero-secondary btn-sm">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
             </svg>
             List a Book
           </a>
-          <a href="dashboard.html" class="btn btn-ghost btn-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
-            </svg>
-          </a>
+          
+          <div class="nav-item-dropdown">
+            <a href="{% url 'profile' %}" class="btn btn-ghost btn-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+              </svg>
+            </a>
+            
+            <div class="dropdown-menu">
+              <a href="{% url 'profile' %}" class="dropdown-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                </svg>
+                Profile
+              </a>
+              <a href="{% url 'logout' %}" class="dropdown-item dropdown-item-danger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/>
+                </svg>
+                Log out
+              </a>
+            </div>
+          </div>
+          {% else %}
+          <a href="{% url 'login' %}" class="btn btn-ghost btn-sm">Log in</a>
+          <a href="{% url 'register' %}" class="btn btn-hero-secondary btn-sm">Sign up</a>
+          {% endif %}
         </div>
         
         <button class="navbar-mobile-toggle">
@@ -57,42 +80,45 @@
       
       <div class="navbar-mobile-menu">
         <div class="navbar-mobile-links">
-          <a href="browse.html" class="navbar-link">Browse Books</a>
-          <a href="about.html" class="navbar-link">About</a>
-          <a href="faq.html" class="navbar-link">FAQ</a>
-          <a href="contact.html" class="navbar-link">Contact</a>
+          <a href="{% url 'browse' %}" class="navbar-link">Browse Books</a>
+          <a href="{% url 'about' %}" class="navbar-link">About</a>
+          <a href="{% url 'faq' %}" class="navbar-link">FAQ</a>
+          <a href="{% url 'contact' %}" class="navbar-link">Contact</a>
         </div>
         <div class="navbar-mobile-actions">
-          <a href="list.html" class="btn btn-hero-secondary btn-md btn-full">
+          {% if user.is_authenticated %}
+          <a href="{% url 'upload' %}" class="btn btn-hero-secondary btn-md btn-full">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
             </svg>
             List a Book
           </a>
-          <a href="dashboard.html" class="btn btn-outline btn-md btn-full">
+          <a href="{% url 'profile' %}" class="btn btn-outline btn-md btn-full">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
             </svg>
             Dashboard
           </a>
+          {% else %}
+          <a href="{% url 'login' %}" class="btn btn-outline btn-md btn-full">Log in</a>
+          <a href="{% url 'register' %}" class="btn btn-hero-secondary btn-md btn-full">Sign up</a>
+          {% endif %}
         </div>
       </div>
     </nav>
   </header>
 
 
-  <main>
-    {% block content %}
-    {% endblock %}
-  </main>
-
+  {% block content %}
+  {% endblock %}
+  
 
    <!-- Footer -->
   <footer class="footer">
     <div class="container-page footer-inner">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="navbar-logo">
+          <a href="{% url 'home' %}" class="navbar-logo">
             <div class="navbar-logo-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
@@ -106,25 +132,25 @@
         <div class="footer-section">
           <h4>Platform</h4>
           <ul class="footer-links">
-            <li><a href="browse.html">Browse Books</a></li>
-            <li><a href="list.html">List a Book</a></li>
-            <li><a href="about.html">About Us</a></li>
+            <li><a href="{% url 'browse' %}">Browse Books</a></li>
+            <li><a href="{% url 'upload' %}">List a Book</a></li>
+            <li><a href="{% url 'about' %}">About Us</a></li>
           </ul>
         </div>
         
         <div class="footer-section">
           <h4>Support</h4>
           <ul class="footer-links">
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="{% url 'faq' %}">FAQ</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
           </ul>
         </div>
         
         <div class="footer-section">
           <h4>Legal</h4>
           <ul class="footer-links">
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="{% url 'tos_privacy' %}">Terms of Service</a></li>
+            <li><a href="{% url 'tos_privacy' %}">Privacy Policy</a></li>
           </ul>
         </div>
       </div>
@@ -137,5 +163,28 @@
   </footer>
 
   <script src="{% static 'Dashboard/script.js' %}"></script>
+  {% if messages %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      {% for message in messages %}
+        var tag = "{{ message.tags }}";
+        var title = "Notification";
+        if (tag.indexOf("success") !== -1) {
+          title = "Success";
+        } else if (tag.indexOf("error") !== -1) {
+          title = "Error";
+        } else if (tag.indexOf("warning") !== -1) {
+          title = "Warning";
+        } else if (tag.indexOf("info") !== -1) {
+          title = "Info";
+        }
+        
+        if (typeof showToast === 'function') {
+           showToast(title, "{{ message|escapejs }}");
+        }
+      {% endfor %}
+    });
+  </script>
+  {% endif %}
 </body>
 </html>

@@ -1,0 +1,84 @@
+{% extends 'Dashboard/base.html' %}
+{% block content %}
+<main class="contact-page">
+    <div class="container-page py-16">
+      <!-- Header -->
+      <div class="contact-header">
+        <div class="contact-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <h1 class="contact-title">Contact Us</h1>
+        <p class="contact-subtitle">Have a question, suggestion, or feedback? We'd love to hear from you.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-form-card">
+          <h2>Send a Message</h2>
+          <form id="contact-form" class="contact-form">
+            <div class="form-group">
+              <label class="label">Your Name</label>
+              <input type="text" class="input" placeholder="John Smith" required>
+            </div>
+            <div class="form-group">
+              <label class="label">Email Address</label>
+              <input type="email" class="input" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label class="label">Message</label>
+              <textarea class="textarea" rows="5" placeholder="How can we help you?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-hero btn-lg btn-full">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <div>
+            <h2>Get in Touch</h2>
+            <p>
+              We typically respond within 24-48 hours. For urgent matters, 
+              please mention it in your message.
+            </p>
+          </div>
+
+          <div class="contact-email-card">
+            <div class="contact-email-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="contact-email-title">Email Us</h3>
+              <p class="contact-email-value">hello@bookswap.co.za</p>
+            </div>
+          </div>
+
+          <div class="contact-suggestion-card">
+            <h3>Suggest a Feature</h3>
+            <p>
+              Have an idea to make BookSwap better? We're always looking for 
+              ways to improve. Share your suggestions in your message and we'll 
+              consider them for future updates.
+            </p>
+          </div>
+
+          <div class="contact-issue-card">
+            <h3>Report an Issue</h3>
+            <p>
+              Found a bug or experiencing problems? Please describe the issue 
+              in detail, including what you were trying to do and what happened instead.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock %}

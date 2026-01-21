@@ -1,0 +1,126 @@
+{% extends 'Dashboard/base.html' %}
+{% block content %}
+
+<main class="faq-page">
+    <div class="container-page py-16">
+      <!-- Header -->
+      <div class="faq-header">
+        <div class="faq-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/>
+          </svg>
+        </div>
+        <h1 class="faq-title">Frequently Asked Questions</h1>
+        <p class="faq-subtitle">Find answers to common questions about BookSwap
+            <br> Definetly not written by AI.
+        </p>
+      </div>
+
+      <!-- FAQ List -->
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            How do I list a book?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Click on 'List a Book' in the navigation menu. Fill in the book details including title, subject, grade, and condition. Add a photo if possible, choose your preferred contact method, and publish. Your listing will be live immediately!
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How do I contact a book owner?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            On any book listing page, you'll see the owner's preferred contact method. Click the 'Contact Owner' button to reach out via WhatsApp, SMS, or email. Be polite, introduce yourself, and arrange a convenient time and place to meet.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is BookSwap really free?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Yes, absolutely! BookSwap is 100% free for everyone. We don't charge any fees for listing books, contacting owners, or using any features of the platform. Our goal is to help families share educational resources, not to make money.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What personal information is shown publicly?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Only your display name and general location (city/area) are visible on your listings. Your email, phone number, or other contact details are never publicly displayed. When someone wants to contact you, they do so through the contact method you've chosen.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How do I ensure a safe meetup?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            We recommend meeting in public places during daylight hours—school parking lots, shopping centers, or coffee shops work great. Consider bringing a friend or family member. Trust your instincts, and if something feels off, it's okay to cancel.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I reserve a book?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Book owners can mark their listings as 'Reserved' if someone has expressed interest. This helps prevent multiple people from showing up for the same book. If you're interested in a book, reach out to the owner quickly!
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What if a book is in poor condition?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            We ask all listers to honestly describe their book's condition. If you receive a book that's significantly worse than described, please contact the owner directly. If there's a serious issue, you can report the listing to our support team.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How do I delete my account?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            You can delete your account in your Dashboard under Settings. This will remove all your listings and personal information from our platform. This action cannot be undone.
+          </div>
+        </div>
+      </div>
+
+      <!-- Still Have Questions -->
+      <div class="faq-footer">
+        <p>Can't find what you're looking for?</p>
+        <a href="contact.html" class="btn btn-hero-secondary btn-md">Contact Us</a>
+      </div>
+    </div>
+  </main>
+
+{% endblock %}

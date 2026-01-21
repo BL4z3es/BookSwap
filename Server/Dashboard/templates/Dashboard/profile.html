@@ -1,0 +1,162 @@
+{% extends 'Dashboard/base.html' %}
+
+{% block content %}
+<main class="dashboard-page">
+    <div class="container-page py-8">
+      <!-- Header -->
+      <div class="dashboard-header">
+        <div>
+          <h1 class="dashboard-title">Dashboard</h1>
+          <p class="dashboard-subtitle">Manage your book listings</p>
+        </div>
+        <a href="list.html" class="btn btn-hero btn-md">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+          List New Book
+        </a>
+      </div>
+
+      <div class="dashboard-grid">
+        <!-- Sidebar -->
+        <div>
+          <div class="dashboard-sidebar">
+            <nav class="dashboard-nav">
+              <button class="dashboard-nav-btn active" data-tab="listings">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+                </svg>
+                My Listings
+              </button>
+              <button class="dashboard-nav-btn" data-tab="profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                </svg>
+                Profile
+              </button>
+              <button class="dashboard-nav-btn" data-tab="settings">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/>
+                </svg>
+                Settings
+              </button>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Main Content -->
+        <div>
+          <!-- Listings Tab -->
+          <div class="dashboard-tab-content" data-tab="listings">
+            <!-- Status Filter -->
+            <div class="status-filter">
+              <button class="status-filter-btn active" data-status="All">All</button>
+              <button class="status-filter-btn" data-status="Available">Available</button>
+              <button class="status-filter-btn" data-status="Reserved">Reserved</button>
+              <button class="status-filter-btn" data-status="Claimed">Claimed</button>
+            </div>
+
+            <!-- Listings Grid -->
+            <div class="grid grid-2" id="listings-grid">
+              <!-- Listings will be loaded by JavaScript -->
+            </div>
+          </div>
+
+          <!-- Profile Tab -->
+          <div class="dashboard-tab-content" data-tab="profile" style="display: none;">
+            <div class="form-card">
+              <h2 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;">Profile Settings</h2>
+              <form id="profile-form" class="profile-form">
+                <div class="form-group">
+                  <label class="label">Display Name</label>
+                  <input type="text" class="input" value="Sarah M.">
+                </div>
+                <div class="form-group">
+                  <label class="label">Location</label>
+                  <input type="text" class="input" value="Sandton, Johannesburg">
+                </div>
+                <button type="submit" class="btn btn-hero btn-md">Save Changes</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Settings Tab -->
+          <div class="dashboard-tab-content" data-tab="settings" style="display: none;">
+            <div class="form-card">
+              <h2 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;">Account Settings</h2>
+              <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <div class="settings-item">
+                  <div>
+                    <p class="settings-item-title">Email Notifications</p>
+                    <p class="settings-item-description">Receive updates about your listings</p>
+                  </div>
+                  <button class="btn btn-outline btn-sm">Configure</button>
+                </div>
+                <div class="settings-item settings-item-danger">
+                  <div>
+                    <p class="settings-item-title settings-item-title-danger">Delete Account</p>
+                    <p class="settings-item-description">Permanently remove your account</p>
+                  </div>
+                  <button class="btn btn-destructive btn-sm">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container-page footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="navbar-logo">
+            <div class="navbar-logo-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+              </svg>
+            </div>
+            <span class="navbar-logo-text">BookSwap</span>
+          </a>
+          <p>A community-driven platform helping students and parents share, swap, and find school books for free.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Platform</h4>
+          <ul class="footer-links">
+            <li><a href="browse.html">Browse Books</a></li>
+            <li><a href="list.html">List a Book</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2024 BookSwap. All rights reserved.</p>
+        <p>Made with <span class="footer-heart">❤</span> for the community</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+{% endblock  %}

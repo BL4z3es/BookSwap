@@ -4,9 +4,13 @@ from django.contrib.auth.models import User
 # Create your models here.
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    bio = models.TextField(blank=True)
+    bio = models.TextField(blank=True, default="Hey, I'm using BookSwap!")
     profile_name = models.CharField(max_length=100, blank=True)
     profile_picture = models.ImageField(upload_to='profile_pics/', blank=True)
+    grade = models.IntegerField(blank=True, null=True)
+    gradyear = models.IntegerField(blank=True, null=True)
+    name = models.CharField(max_length=100, blank=True)
+    surname = models.CharField(max_length=100, blank=True)
     
 
     def __str__(self):
@@ -21,12 +25,8 @@ class Book(models.Model):
     #image = models.ImageField(upload_to='book_images/', blank=True)
     owner = models.ForeignKey(UserProfile, on_delete=models.CASCADE, related_name='books')
     
-    contact_methods = [
-        ('E', 'Email'),
-        ('W', 'Whatsapp'),
-        ('P', 'Phone'),
-    ]
-    contact_method = models.CharField(max_length=1, choices=contact_methods, blank=True)
+
+    contact_method = models.CharField(max_length=1, blank=True)
     contact_info = models.CharField(max_length=200, blank=True)
     is_available = models.BooleanField(default=True)
     reserved_by = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='reserved_books')

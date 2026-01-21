@@ -2818,3 +2818,112 @@ img {
   font-size: 0.875rem;
   color: hsl(var(--muted-foreground));
 }
+
+/* ========================================
+   Dropdown Menu
+   ======================================== */
+
+.nav-item-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  min-width: 12rem;
+  padding: 0.375rem;
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border) / 0.8);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-xl), 0 0 0 1px hsl(var(--border) / 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px) scale(0.95);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: top right;
+  z-index: 1000;
+}
+
+/* Invisible bridge to prevent closing when moving mouse over gap */
+.dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  right: 0;
+  height: 1rem;
+  background: transparent;
+}
+
+.nav-item-dropdown:hover .dropdown-menu,
+.nav-item-dropdown:focus-within .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  animation: menuPop 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Keyframes for Macintosh-like app open animation */
+@keyframes menuPop {
+  0% {
+    opacity: 0;
+    transform: translateY(8px) scale(0.92);
+  }
+  60% {
+    transform: translateY(-2px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: hsl(var(--secondary-foreground));
+  border-radius: calc(var(--radius) - 0.25rem);
+  transition: all 0.15s ease;
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--foreground));
+}
+
+.dropdown-item svg {
+  width: 1rem;
+  height: 1rem;
+  color: hsl(var(--muted-foreground));
+  transition: color 0.15s;
+}
+
+.dropdown-item:hover svg {
+  color: hsl(var(--foreground));
+}
+
+/* Danger Item (Logout) */
+.dropdown-item-danger {
+  color: hsl(var(--destructive));
+}
+
+.dropdown-item-danger svg {
+  color: hsl(var(--destructive));
+}
+
+.dropdown-item-danger:hover {
+  background-color: hsl(var(--destructive) / 0.08); /* Soft red background */
+  color: hsl(var(--destructive));
+}
+
+.dropdown-item-danger:hover svg {
+  color: hsl(var(--destructive));
+}
